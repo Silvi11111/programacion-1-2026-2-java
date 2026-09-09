@@ -14,6 +14,11 @@ public class Main {
         //System.out.println("El resultado es "+ sumatoria);
 
 
+        int matriz [][] = {{2,3,45,6},
+                           {4,6,7,3},
+                           {4,6,7,3}
+                          };
+
         String [] habitaciones = {"blanco","blanco","blanco","blanco"};
 
         imprimirArreglo(habitaciones);
@@ -21,8 +26,6 @@ public class Main {
         pintar(habitaciones,"caferojorosado");
 
         imprimirArreglo(habitaciones);
-
-
         // realizar un metodo que diga si existe un numero dado en el arreglo
 
 
@@ -75,12 +78,78 @@ public class Main {
     }
 
 
+    /**
+     *
+     */
+     public static boolean existeRepetido(int arreglo[]){
+        boolean repetido = false;
+        for(int i = 0; i < arreglo.length; i++ ){
+             int numero1 = arreglo[i];
+             for (int j = i+1 ; j < arreglo.length;j++){
+                 int numero2 = arreglo[j];
+                 if(numero1 == numero2){
+                    return  true;
+                 }
+             }
+        }
+        return repetido;
+     }
+    public static boolean existeRepetido2(int arreglo[]){
+        for(int i = 0; i < arreglo.length; i++ ){
+            int numero1 = arreglo[i];
+            for (int j = i+1 ; j < arreglo.length;j++){
+                int numero2 = arreglo[j];
+                if(numero1 == numero2){
+                    return  true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static boolean existeRepetido3(int arreglo[]){
+        boolean repetido = false;
+         for(int i = 0; i < arreglo.length; i++ ){
+            int numero1 = arreglo[i];
+            for (int j = i+1 ; j < arreglo.length;j++){
+                int numero2 = arreglo[j];
+                if(numero1 == numero2){
+                    repetido = true;
+                    break;
+                }
+            }
+            if(repetido){
+                break;
+            }
+        }
+        return repetido;
+    }
+
+    public static boolean existeRepetido4(int arreglo[]){
+        boolean repetido = false;
+        for(int i = 0; i < arreglo.length && repetido == false; i++ ){
+            int numero1 = arreglo[i];
+            for (int j = i+1 ; j < arreglo.length;j++){
+                int numero2 = arreglo[j];
+                if(numero1 == numero2){
+                    repetido = true;
+                    break;
+                }
+            }
+        }
+        return repetido;
+    }
 
 
+    //tarea: Investigacion- Estudiarlo
+    // 1.imprimir una matriz
+    // 2. sumar todos los numeros de una matriz
+    // 3. Sumar los numeros de la diagonal de una matriz
+    // 4. dibujar una x en una matriz
+    // 5. Cuadro superior en una matriz
+    // 6. Dibujar en una matriz un espiral de numeros
 
-
-
-
+    // debe estudiar ciclos- (if, else, case), variables-arreglos y matrices
 
 
 
