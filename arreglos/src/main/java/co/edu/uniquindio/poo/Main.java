@@ -137,6 +137,7 @@ public class Main {
                 }
             }
         }
+        System.err.println("Mensaje de error");
         return repetido;
     }
 
@@ -150,6 +151,7 @@ public class Main {
     // 6. Dibujar en una matriz un espiral de numeros
 
     // debe estudiar ciclos- (if, else, case), variables-arreglos y matrices
+
 
 
 
