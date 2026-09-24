@@ -76,7 +76,6 @@ public class Curso { // singular, el nombre de la clase debe ser la primer letra
         }
         return mensaje;
     }
-
     public Estudiante buscarEstudiante (String identificacion){
         for(Estudiante aux : listaEstudiantes){
             if(aux.getIdentificacion().equals(identificacion)){
@@ -85,7 +84,36 @@ public class Curso { // singular, el nombre de la clase debe ser la primer letra
         }
         return null;
     }
+    public boolean eliminarEstudiante(String identificacion) {
+        Estudiante estudianteEncontrado = buscarEstudiante(identificacion);
+        if(estudianteEncontrado != null){
+            listaEstudiantes.remove(estudianteEncontrado);
+            return true;
+        }else return false;
+    }
 
+    public boolean actualizarEstudiante(String identificacionAntigua, String identificacionNueva,
+                                        String nombresNuevos, String apellidosNuevos,
+                                        byte edadEstudianteNueva, String correoNuevo, String telefonoNuevo) {
+        Estudiante estudianteEncontrado = buscarEstudiante(identificacionAntigua);
+        if(estudianteEncontrado != null){
+            estudianteEncontrado.setApellidos(apellidosNuevos);
+            estudianteEncontrado.setNombres(nombresNuevos);
+            estudianteEncontrado.setIdentificacion(identificacionNueva);
+            estudianteEncontrado.setEdad(edadEstudianteNueva);
+            estudianteEncontrado.setCorreo(correoNuevo);
+            estudianteEncontrado.setTelefono(telefonoNuevo);
+            return true;
+        }else return false;
+    }
 
+    public String registrarNotaEstudiante(String identificacion, String nombreNota, float valorNota) {
 
+        Estudiante estudianteEncontrado = buscarEstudiante(identificacion);
+        if(estudianteEncontrado != null){
+            return estudianteEncontrado.registrarNota(nombreNota,valorNota);
+        }else{
+            return "El estudiante no esta registrado";
+        }
+    }
 }
