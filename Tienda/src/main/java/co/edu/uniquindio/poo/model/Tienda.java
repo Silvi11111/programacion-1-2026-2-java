@@ -37,5 +37,14 @@ public class Tienda {
         this.telefono = telefono;
     }
 
+    public String registrarCliente(Cliente cliente){
+        Cliente clienteEncontrado = buscarCliente(cliente.getDocumentoIdentidad());
+        if(clienteEncontrado == null){
+            listaClientes.add(cliente);
+            return "El cliente fue registrado exitosamente";
+        }else return "No se puede registrar, ya existe un cliente con esa informacion registrado anteriormente.";
+    }
+    // Cambiar if(clienteEncontrado == null){ por un Optional
+    // hacer el metodo buscar cliente usando un optional
 
 }

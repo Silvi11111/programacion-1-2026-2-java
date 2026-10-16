@@ -1063,7 +1063,7 @@
 				    default_color 	TRUE)
 				label      	(object SegLabel @25
 				    Parent_View 	@24
-				    location   	(574, 582)
+				    location   	(555, 620)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1079,8 +1079,8 @@
 				    max_width  	266
 				    justify    	0
 				    label      	"-listaClientes"
-				    pctDist    	0.875000
-				    height     	130
+				    pctDist    	0.938356
+				    height     	111
 				    orientation 	0)
 				stereotype 	TRUE
 				line_color 	3342489
@@ -1129,7 +1129,7 @@
 				    default_color 	TRUE)
 				label      	(object SegLabel @28
 				    Parent_View 	@27
-				    location   	(883, 101)
+				    location   	(955, 104)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1145,8 +1145,8 @@
 				    max_width  	312
 				    justify    	0
 				    label      	"+ownedByTienda"
-				    pctDist    	0.590389
-				    height     	66
+				    pctDist    	0.714041
+				    height     	62
 				    orientation 	0)
 				stereotype 	TRUE
 				line_color 	3342489

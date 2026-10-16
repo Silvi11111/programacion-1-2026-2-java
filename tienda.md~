@@ -66,6 +66,21 @@
 			quid       	"51D3BA22030D"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "consultarFacturasCliente"
+			quid       	"51D3BBD1036B"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "obtenerProductosBajoInventario"
+			quid       	"51D3BBF9008C"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "CRUDs"
+			quid       	"51D3C7DD0203"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
 			uid        	0))
 		class_attributes 	(list class_attribute_list
 		    (object ClassAttribute "nombre"
@@ -147,6 +162,11 @@
 			uid        	0)
 		    (object Operation "actualizarInventario"
 			quid       	"51D3B9C60280"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "CRUD"
+			quid       	"51D3C7EB00CB"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0))
@@ -971,7 +991,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(1403, 228)
+			location   	(1444, 284)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -986,7 +1006,7 @@
 			    location   	(1131, 53)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	545
+			    max_width  	626
 			    justify    	0
 			    label      	"Tienda")
 			icon_style 	"Icon"
@@ -1008,14 +1028,14 @@
 			    icon_style 	"Icon"
 			    fill_color 	13434879
 			    anchor     	2
-			    nlines     	5
-			    max_width  	446
+			    nlines     	8
+			    max_width  	653
 			    justify    	1)
-			width      	563
-			height     	375
+			width      	644
+			height     	487
 			annotation 	8)
 		    (object AssociationViewNew "$UNNAMED$2" @23
-			location   	(539, 168)
+			location   	(538, 166)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1031,7 +1051,7 @@
 			roleview_list 	(list RoleViews
 			    (object RoleView "listaClientes" @24
 				Parent_View 	@23
-				location   	(-827, -38)
+				location   	(-828, -40)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -1043,7 +1063,7 @@
 				    default_color 	TRUE)
 				label      	(object SegLabel @25
 				    Parent_View 	@24
-				    location   	(574, 583)
+				    location   	(574, 582)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1068,11 +1088,11 @@
 				client     	@23
 				supplier   	@9
 				vertices   	(list Points
-				    (539, 168)
-				    (444, 168)
+				    (538, 166)
+				    (444, 166)
 				    (444, 656))
 				line_style 	3
-				origin_attachment 	(539, 168)
+				origin_attachment 	(538, 166)
 				terminal_attachment 	(444, 656)
 				label      	(object SegLabel @26
 				    Parent_View 	@24
@@ -1097,7 +1117,7 @@
 				    orientation 	1))
 			    (object RoleView "ownedByTienda" @27
 				Parent_View 	@23
-				location   	(-827, -38)
+				location   	(-828, -40)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -1109,7 +1129,7 @@
 				    default_color 	TRUE)
 				label      	(object SegLabel @28
 				    Parent_View 	@27
-				    location   	(883, 103)
+				    location   	(883, 101)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1134,13 +1154,13 @@
 				client     	@23
 				supplier   	@22
 				vertices   	(list Points
-				    (539, 168)
-				    (1122, 168))
+				    (538, 166)
+				    (1122, 166))
 				line_style 	3
-				origin_attachment 	(539, 168)
-				terminal_attachment 	(1122, 168))))
+				origin_attachment 	(538, 166)
+				terminal_attachment 	(1135, 194))))
 		    (object AssociationViewNew "$UNNAMED$3" @29
-			location   	(2082, 222)
+			location   	(2082, 257)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1156,7 +1176,7 @@
 			roleview_list 	(list RoleViews
 			    (object RoleView "listaProductos" @30
 				Parent_View 	@29
-				location   	(716, 16)
+				location   	(716, 51)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -1168,7 +1188,7 @@
 				    default_color 	TRUE)
 				label      	(object SegLabel @31
 				    Parent_View 	@30
-				    location   	(2253, 600)
+				    location   	(2253, 606)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1193,14 +1213,14 @@
 				client     	@29
 				supplier   	@10
 				vertices   	(list Points
-				    (2082, 222)
+				    (2082, 257)
 				    (2082, 672))
 				line_style 	3
-				origin_attachment 	(2082, 222)
+				origin_attachment 	(2082, 257)
 				terminal_attachment 	(2082, 672)
 				label      	(object SegLabel @32
 				    Parent_View 	@30
-				    location   	(2028, 633)
+				    location   	(2028, 636)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1221,7 +1241,7 @@
 				    orientation 	1))
 			    (object RoleView "ownedByTienda" @33
 				Parent_View 	@29
-				location   	(716, 16)
+				location   	(716, 51)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -1233,7 +1253,7 @@
 				    default_color 	TRUE)
 				label      	(object SegLabel @34
 				    Parent_View 	@33
-				    location   	(1838, 205)
+				    location   	(1905, 200)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1258,18 +1278,18 @@
 				client     	@29
 				supplier   	@22
 				vertices   	(list Points
-				    (2082, 222)
-				    (2082, 162)
-				    (1684, 162))
+				    (2082, 257)
+				    (2082, 157)
+				    (1766, 157))
 				line_style 	3
-				origin_attachment 	(2082, 222)
-				terminal_attachment 	(1684, 162))))
+				origin_attachment 	(2082, 257)
+				terminal_attachment 	(1766, 157))))
 		    (object ClassView "Class" "Logical View::MetodoPago" @35
 			ShowCompartmentStereotypes 	TRUE
 			SuppressOperation 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(3076, 1365)
+			location   	(3066, 1365)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1281,7 +1301,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@35
-			    location   	(2766, 1259)
+			    location   	(2756, 1259)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	620
@@ -1289,7 +1309,7 @@
 			    label      	"MetodoPago")
 			stereotype 	(object ItemLabel
 			    Parent_View 	@35
-			    location   	(2766, 1209)
+			    location   	(2756, 1209)
 			    fill_color 	13434879
 			    anchor     	10
 			    nlines     	1
@@ -1302,7 +1322,7 @@
 			quidu      	"51D3B8EE029F"
 			compartment 	(object Compartment
 			    Parent_View 	@35
-			    location   	(2766, 1320)
+			    location   	(2756, 1320)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1363,7 +1383,7 @@
 			    icon_style 	"Icon"
 			    fill_color 	13434879
 			    anchor     	2
-			    nlines     	7
+			    nlines     	8
 			    max_width  	621
 			    justify    	1)
 			width      	650
@@ -1506,7 +1526,7 @@
 				    height     	55
 				    orientation 	1))))
 		    (object AssociationViewNew "$UNNAMED$7" @44
-			location   	(1304, 1480)
+			location   	(1304, 1479)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1522,7 +1542,7 @@
 			roleview_list 	(list RoleViews
 			    (object RoleView "listaDetalleFactura" @45
 				Parent_View 	@44
-				location   	(35, 630)
+				location   	(35, 629)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -1534,7 +1554,7 @@
 				    default_color 	TRUE)
 				label      	(object SegLabel @46
 				    Parent_View 	@45
-				    location   	(1389, 1520)
+				    location   	(1389, 1519)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1559,14 +1579,14 @@
 				client     	@44
 				supplier   	@16
 				vertices   	(list Points
-				    (1304, 1480)
-				    (1576, 1480))
+				    (1304, 1479)
+				    (1576, 1479))
 				line_style 	3
-				origin_attachment 	(1304, 1480)
-				terminal_attachment 	(1576, 1480)
+				origin_attachment 	(1304, 1479)
+				terminal_attachment 	(1576, 1479)
 				label      	(object SegLabel @47
 				    Parent_View 	@45
-				    location   	(1512, 1444)
+				    location   	(1512, 1443)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1587,7 +1607,7 @@
 				    orientation 	0))
 			    (object RoleView "ownedByFactura" @48
 				Parent_View 	@44
-				location   	(35, 630)
+				location   	(35, 629)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -1624,14 +1644,14 @@
 				client     	@44
 				supplier   	@36
 				vertices   	(list Points
-				    (1304, 1480)
-				    (1244, 1480)
+				    (1304, 1479)
+				    (1244, 1479)
 				    (1244, 1237))
 				line_style 	3
-				origin_attachment 	(1304, 1480)
+				origin_attachment 	(1304, 1479)
 				terminal_attachment 	(1244, 1237))))
 		    (object AssociationViewNew "$UNNAMED$8" @50
-			location   	(1403, 544)
+			location   	(1403, 600)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1647,7 +1667,7 @@
 			roleview_list 	(list RoleViews
 			    (object RoleView "listaFacturas" @51
 				Parent_View 	@50
-				location   	(28, 294)
+				location   	(28, 350)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -1659,7 +1679,7 @@
 				    default_color 	TRUE)
 				label      	(object SegLabel @52
 				    Parent_View 	@51
-				    location   	(1587, 604)
+				    location   	(1587, 633)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1684,14 +1704,14 @@
 				client     	@50
 				supplier   	@36
 				vertices   	(list Points
-				    (1403, 544)
+				    (1403, 600)
 				    (1403, 674))
 				line_style 	3
-				origin_attachment 	(1403, 544)
+				origin_attachment 	(1403, 600)
 				terminal_attachment 	(1403, 674)
 				label      	(object SegLabel @53
 				    Parent_View 	@51
-				    location   	(1365, 630)
+				    location   	(1365, 649)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1712,7 +1732,7 @@
 				    orientation 	1))
 			    (object RoleView "ownedByTienda" @54
 				Parent_View 	@50
-				location   	(28, 294)
+				location   	(28, 350)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -1724,7 +1744,7 @@
 				    default_color 	TRUE)
 				label      	(object SegLabel @55
 				    Parent_View 	@54
-				    location   	(1226, 475)
+				    location   	(1226, 562)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -1749,11 +1769,11 @@
 				client     	@50
 				supplier   	@22
 				vertices   	(list Points
-				    (1403, 544)
-				    (1403, 415))
+				    (1403, 600)
+				    (1403, 527))
 				line_style 	3
-				origin_attachment 	(1403, 544)
-				terminal_attachment 	(1403, 415))))
+				origin_attachment 	(1403, 600)
+				terminal_attachment 	(1403, 527))))
 		    (object ClassView "Class" "Logical View::EstadoFactura" @56
 			ShowCompartmentStereotypes 	TRUE
 			SuppressOperation 	TRUE

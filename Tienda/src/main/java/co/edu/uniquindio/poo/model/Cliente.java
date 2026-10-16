@@ -50,5 +50,7 @@ public class Cliente {
         return Collections.unmodifiableList(listaFacturas);
     }
 
-
+    public Tienda getOwnedByTienda() {
+        return ownedByTienda;
+    }
 }
